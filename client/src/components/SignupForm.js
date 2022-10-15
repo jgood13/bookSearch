@@ -5,14 +5,14 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
-const SignupForm = (event) => {
-  console.log(event);
+const SignupForm = () => {
   // set initial form state
   const [userFormData, setUserFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
+  console.log()
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert

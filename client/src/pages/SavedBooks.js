@@ -6,19 +6,35 @@ import {
   Card,
   Button,
 } from "react-bootstrap";
+<<<<<<< HEAD
 import { useQuery, useMutation } from "@apollo/react-hooks";
 import { QUERY_ME } from "../utils/queries";
 import { REMOVE_BOOK } from "../utils/mutations";
+=======
+import { useMutation } from "@apollo/react-hooks";
+import { getCurrentUser } from "../utils/getCurrentUser";
+import { REMOVE_BOOK } from "../utils/mutations";
+
+>>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
 import Auth from "../utils/auth";
 import { removeBookId } from "../utils/localStorage";
 
 const SavedBooks = () => {
+<<<<<<< HEAD
   const [setUserData] = useState({});
   const { data } = useQuery(QUERY_ME);
   const userData = data.me || {};
   const [removeBook] = useMutation(REMOVE_BOOK);
 
   // use this to determine if `useEffect()` hook needs to run afsgain
+=======
+  // const { data } = useQuery(getCurrentUser);
+  const { removeBook } = useMutation(REMOVE_BOOK);
+  const [userData, setUserData] = useState({});
+
+  console.log(userData);
+  // use this to determine if `useEffect()` hook needs to run again
+>>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
   const userDataLength = Object.keys(userData).length;
 
   useEffect(() => {
@@ -30,7 +46,11 @@ const SavedBooks = () => {
           return false;
         }
 
+<<<<<<< HEAD
         const response = await data(token);
+=======
+        const response = await getCurrentUser(token);
+>>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
 
         if (!response.ok) {
           throw new Error("something went wrong!");
@@ -44,10 +64,17 @@ const SavedBooks = () => {
     };
 
     getUserData();
+<<<<<<< HEAD
   }, [userDataLength, data, setUserData]);
 
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
+=======
+  }, [userDataLength]);
+
+  // create function that accepts the book's mongo _id value as param and deletes the book from the database
+  const handleremoveBook = async (bookId) => {
+>>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -107,7 +134,11 @@ const SavedBooks = () => {
                   <Card.Text>{book.description}</Card.Text>
                   <Button
                     className="btn-block btn-danger"
+<<<<<<< HEAD
                     onClick={() => handleDeleteBook(book.bookId)}
+=======
+                    onClick={() => handleremoveBook(book.bookId)}
+>>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
                   >
                     Delete this Book!
                   </Button>

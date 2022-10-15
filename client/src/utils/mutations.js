@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { gql } from "graphql-tag";
+=======
+import { gql } from "@apollo/client";
+>>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
 
 export const LOGIN_USER = gql`
   mutation loginUser($email: String!, $password: String!) {
@@ -60,3 +64,7 @@ export const REMOVE_BOOK = gql`
     }
   }
 `;
+
+export const searchGoogleBooks = (query) => {
+  return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+};
