@@ -5,11 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
-<<<<<<< HEAD
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-=======
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
->>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "cd client && npm run build"
   },
@@ -18,11 +14,5 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
-<<<<<<< HEAD
-  },
-  "dependencies": {
-    "@apollo/client": "^3.7.0"
-=======
->>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
   }
 }

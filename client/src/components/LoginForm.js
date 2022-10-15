@@ -6,18 +6,11 @@ import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 const LoginForm = () => {
-<<<<<<< HEAD
-=======
-  const [loginUser] = useMutation(LOGIN_USER);
->>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
-<<<<<<< HEAD
   const [loginUser] = useMutation(LOGIN_USER);
-=======
->>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
@@ -35,10 +28,7 @@ const LoginForm = () => {
 
     try {
       const response = await loginUser(userFormData);
-<<<<<<< HEAD
       console.log(userFormData);
-=======
->>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
 
       if (!response.ok) {
         throw new Error("something went wrong!");

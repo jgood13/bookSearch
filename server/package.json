@@ -5,12 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-<<<<<<< HEAD
     "watch": "nodemon server.js"
-=======
-    "watch": "nodemon server.js",
-    "seed": "node seeders/seeds.js"
->>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
   },
   "keywords": [],
   "author": "",
@@ -19,7 +14,6 @@
     "bcrypt": "^4.0.1",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-<<<<<<< HEAD
     "mongoose": "^5.9.10"
   },
   "devDependencies": {
@@ -33,12 +27,5 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.27.0",
     "mongoose": "^5.9.10"
-=======
-    "mongoose": "^5.9.10",
-    "apollo-server-express": "^2.16.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
->>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
   }
 }

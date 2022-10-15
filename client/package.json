@@ -2,11 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
   "proxy": "http://localhost:3001",
-=======
-  "proxy": "http://localhost:3001/",
->>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
   "dependencies": {
     "@apollo/client": "^3.7.0",
     "@apollo/react-hooks": "^4.0.0",
@@ -15,12 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "apollo-boost": "^0.4.9",
     "bootstrap": "^4.4.1",
-<<<<<<< HEAD
     "graphql-tag": "^2.12.6",
-=======
-    "graphql": "^15.4.0",
-    "graphql-tag": "^2.11.0",
->>>>>>> ee9fc217c369b7104e4ba4bf16a35de31e044d59
     "jwt-decode": "^2.2.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
